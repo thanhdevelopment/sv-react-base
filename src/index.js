@@ -7,12 +7,17 @@ import './scss/style.core.scss';
 // Components
 import App from './App';
 
+// Components
+import { Layout } from './components/layouts';
+
 // Services
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Layout>
+            <App />
+        </Layout>
     </React.StrictMode>,
     document.getElementById('root')
 );
