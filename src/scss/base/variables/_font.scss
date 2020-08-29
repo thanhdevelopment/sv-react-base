@@ -1,0 +1,37 @@
+//
+// Fonts
+//
+@font-face {
+    font-family: 'Nunito Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+        url(https://fonts.gstatic.com/s/nunito/v13/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito Light';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Nunito Light'), local('Nunito-Light'), 
+        url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAnsSUbuvIWzgPDEtj.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nunito Bold'), local('Nunito-Bold'), 
+        url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAjsOUbuvIWzgPDEtj.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), 
+        url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofA-seUbuvIWzgPDEtj.woff2) format('woff2');
+}

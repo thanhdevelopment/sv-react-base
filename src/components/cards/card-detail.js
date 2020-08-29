@@ -1,0 +1,1 @@
+// Card detail: Khung hien thi trong view tim kiem danh sach san pham
