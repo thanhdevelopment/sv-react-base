@@ -1,0 +1,103 @@
+/*------begin: Slider Horizontal------*/
+.list-product-horizontal--slider {
+    border-top: 1px solid #e4e4e4;
+    .slick-prev {
+        &:before {
+            display: none !important;
+        }
+    }
+    .slick-list {
+        .slick-track {
+            // transform: translate3d(-1665px, 0px, 0px);
+            .slick-slide {
+                width: 256px !important;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.list-brand-slider {
+    .slick-next {
+        display: inline-block;
+        padding: 6px;
+        right: -8px;
+        background: #fff;
+        color: #fff;
+        box-shadow: 0px 3px 6px #00000029;
+        -moz-box-shadow: 0px 3px 6px #00000029;
+        -webkit-box-shadow: 0px 3px 6px #00000029;
+        border-radius: 50%;
+        &:before {
+            display: none !important;
+        }
+    }
+    .slick-prev {
+        &:before {
+            display: none !important;
+        }
+    }
+    .slick-list {
+        .slick-track {
+            .slick-slide {
+                width: 256px !important;
+                margin-right: 8.5px;
+            }
+        }
+    }
+}
+/*------end: Slider Horizontal------*/
+
+/*------begin: Slider Vertical------*/
+.slider-vertical {
+    .slick-list {
+        .slick-track {
+            .slick-slide {
+                width: 258px !important;
+                margin-right: 10px;
+                > div {
+                    > div {
+                        &:nth-last-child(1) {
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slick-slider {
+    .slick-prev {
+        &:before {
+            display: none !important;
+        }
+    }
+}
+/*------end: Slider Vertical------*/
+
+
+// Custom button slick next
+.slick-slider{
+    .slick-next {
+        top: 50%;
+        right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        background: #fff;
+        color: #fff;
+        box-shadow: 0px 3px 6px #00000029;
+        -moz-box-shadow: 0px 3px 6px #00000029;
+        -webkit-box-shadow: 0px 3px 6px #00000029;
+        border-radius: 50%;
+        > img {
+            width: 7px;
+            height: 9px;
+        }
+        &:before {
+            display: none !important;
+        }
+    }
+}
+   

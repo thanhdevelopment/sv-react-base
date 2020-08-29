@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 // Themes
 import './scss/style.core.scss';
 
 // Components
-import App from './App';
+import Home from '../src/views/home';
 
 // Components
 import { Layout } from './components/layouts';
@@ -15,9 +16,17 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Layout>
-            <App />
-        </Layout>
+        <BrowserRouter>
+            <Layout>
+                <Switch>
+                    <Route
+                        path="/"
+                        component={Home}
+                        exact
+                    />
+                </Switch>
+            </Layout>
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );

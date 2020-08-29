@@ -7,9 +7,9 @@
     justify-content: space-between;
     /*------begin: MENU LEFT------*/
     &--left {
-        padding: 11px 19px;
+        padding: 11px 13px;
         position: relative;
-        width: 17%;
+        width: 15%;
         &:hover {
             background: #272727;
         }
@@ -65,7 +65,7 @@
                 display: flex;
                 justify-content: space-between;
                 border-top: 1px solid #00000029;
-                transition: all ease 0.2s;
+                // transition: all ease 0.2s;
                 cursor: pointer;
                 > span {
                     font-family: NunitoSansRegular;
