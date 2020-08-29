@@ -42,9 +42,9 @@ function Footer() {
                                 <span>Chính sách đổi trả</span>
                             </div>
                         </div>
-                        <div className="coco-footer--wrap__center">
-                            <div className="coco-footer--wrap__center__title">LIÊN HỆ VỚI CHÚNG TÔI</div>
-                            <div className="coco-footer--wrap__center__subtitle">
+                        <div className="coco-footer--wrap__middle">
+                            <div className="coco-footer--wrap__middle__title">LIÊN HỆ VỚI CHÚNG TÔI</div>
+                            <div className="coco-footer--wrap__middle__subtitle">
                                 <div>
                                     <img src="/media/images/ic-phone.svg" />
                                     <span>Điện thoại: +84-988888290</span>

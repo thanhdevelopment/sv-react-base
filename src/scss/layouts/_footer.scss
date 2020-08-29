@@ -23,6 +23,8 @@
                 // max-width: 16.5rem;
                 width: 17%;
                 .coco-footer--wrap__logo {
+                    display: flex;
+                    justify-content: center;
                     > img {
                         width: 82%;
                     }
@@ -64,12 +66,11 @@
             }
             &__right {
                 // max-width: 25rem;
-                width: 28%;
+                width: 25%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 color: #ffffff;
-                white-space: nowrap;
                 .coco-footer--wrap__top {
                     &__title {
                         font-family: NunitoSansBold;
@@ -105,7 +106,7 @@
                         }
                     }
                 }
-                .coco-footer--wrap__center {
+                .coco-footer--wrap__middle {
                     margin-top: 32px;
                     &__title {
                         font-family: NunitoSansBold;
