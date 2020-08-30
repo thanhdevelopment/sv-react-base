@@ -4,11 +4,11 @@ class ItemArticle extends Component {
         return (
             <div className="ccs-item-article">
                 <div className="ccs-item-article--background">
-                    <div>
-                        <div className="ccs-item-article--background__title">
+                    <div className="ccs-item-article__body">
+                        <div className="ccs-item-article__body_title">
                             Bộ sản phẩm AVÈNE cho mùa hè năng động
                     </div>
-                        <div className="ccs-item-article--background__description">
+                        <div className="ccs-item-article__body_description">
                             Avène là dòng Dược Mỹ Phẩm của Pháp với lịch sử phát triển
                             gần 300 năm, đã được các bác sĩ da liễu trên toàn thế giới
                             xác nhận...

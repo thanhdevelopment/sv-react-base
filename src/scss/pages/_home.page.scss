@@ -53,8 +53,8 @@
         .hpls__title {
             position: relative;
             font-family: NunitoSansBold;
-            font-size: 24px;
-            line-height: 33px;
+            font-size: 18px;
+            line-height: 25px;
             color: #000000;
             text-align: center;
             text-transform: uppercase;
@@ -75,51 +75,7 @@
         .hpls_lstStore {
             display: flex;
             justify-content: space-between;
-            padding: 40px 8px 64px 8px;
-            .hplss__item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .hplssi__img {
-                    width: 18rem;
-                    height: 18rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background: #f3f3f3;
-                    border-radius: 50%;
-                    border: 3px solid #000000;
-                    > img {
-                        display: inline-block;
-                        width: 16rem;
-                        height: 16rem;
-                        border-radius: 50%;
-                        border: 3px solid #000000;
-                    }
-                }
-                .hplssi__text {
-                    display: flex;
-                    flex-direction: column;
-                    > span {
-                        text-align: center;
-                        &:nth-last-child(1) {
-                            margin-top: 7px;
-                            font-family: NunitoSansRegular;
-                            font-size: 16px;
-                            line-height: 21px;
-                            color: #000000;
-                        }
-                        &:nth-last-child(2) {
-                            margin-top: 24px;
-                            font-family: NunitoSansBold;
-                            font-size: 18px;
-                            line-height: 25px;
-                            color: #000000;
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-            }
+            padding: 39px 0 88px 0;
         }
     }
     .home-list-product-horizontal {

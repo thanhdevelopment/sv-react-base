@@ -192,6 +192,7 @@
 /*------begin: Type Item article ------*/
 .ccs-item-article {
     width: 23%;
+    max-height: 480px;
     position: relative;
     &::before {
         position: absolute;
@@ -208,27 +209,27 @@
         flex-direction: column;
         justify-content: flex-end;
         color: #ffffff;
-        min-height: 600px;
+        min-height: 480px;
         padding: 0px 24px;
         background: url('/media/images/article1.jpg') center no-repeat;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        > div {
+        .ccs-item-article__body {
             padding: 16px 0px;
             z-index: 5;
-            &__title {
+            &_title {
                 font-family: NunitoSansSemiBold;
-                font-size: 21px;
-                line-height: 30px;
+                font-size: 18px;
+                line-height: 26px;
                 color: #ffffff;
                 text-transform: uppercase;
             }
-            &__description {
+            &_description {
                 margin-top: 8px;
                 font-family: NunitoSansRegular;
-                font-size: 16px;
-                line-height: 21px;
+                font-size: 14px;
+                line-height: 19px;
                 color: #ffffff;
             }
         }
@@ -242,8 +243,9 @@
     flex-direction: column;
     align-items: center;
     &--img {
-        width: 18rem;
-        height: 18rem;
+        width: 14rem;
+        height: 14rem;
+        padding: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -252,8 +254,8 @@
         border: 3px solid #000000;
         > img {
             display: inline-block;
-            width: 16rem;
-            height: 16rem;
+            width: 12.9rem;
+            height: 12.9rem;
             border-radius: 50%;
             border: 3px solid #000000;
         }
@@ -267,14 +269,14 @@
                 margin-top: 7px;
                 font-family: NunitoSansRegular;
                 font-size: 16px;
-                line-height: 21px;
+                line-height: 22px;
                 color: #000000;
             }
             &:nth-last-child(2) {
-                margin-top: 24px;
+                margin-top: 16px;
                 font-family: NunitoSansBold;
-                font-size: 18px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 19px;
                 color: #000000;
                 text-transform: uppercase;
             }

@@ -93,6 +93,7 @@ function Home() {
                     <ItemStore />
                     <ItemStore />
                     <ItemStore />
+                    <ItemStore />
                 </div>
             </div>
         </div>
