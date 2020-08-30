@@ -36,7 +36,6 @@
                 .slick-next {
                     top: 25%;
                 }
-
             }
         }
     }
@@ -231,13 +230,13 @@
 }
 
 //
-// CardDetailByCategories
+// Card Detail
 //
 .card-list-item {
     &--header {
         font-family: NunitoSansBold;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 16px;
+        line-height: 22px;
         text-align: left;
         color: #000000;
         text-transform: uppercase;
@@ -261,10 +260,11 @@
             }
 
             &.nav-padding {
-                padding: 16px 24px;
+               padding-top: 12px;
+               padding-bottom: 12px;
             }
 
-            &.nav-flex-right {
+            .nav-flex-right {
                 display: flex;
                 justify-content: flex-end;
             }
@@ -276,28 +276,33 @@
             }
 
             .ccs-navbar--left {
-                width: 75%;
+                width: 68%;
+                padding-left: 16px;
                 > span {
                     width: 12%;
                     position: sticky;
                     font-family: NunitoSansSemiBold;
-                    font-size: 16px;
-                    line-height: 21px;
+                    font-size: 14px;
+                    line-height: 19px;
                     color: #000000;
                 }
             }
 
             .ccs-navbar--right {
-                width: 15%;
+                width: 12%;
+                padding-right: 16px;
             }
         }
 
         .coco-list-item {
             display: flex;
             flex-wrap: wrap;
-            // justify-content: center;
+            justify-content: center;
             background: #ffffff;
             overflow: hidden;
+            .ccs-item-wrap {
+                margin: 0 6.5px;
+            }
         }
     }
 }

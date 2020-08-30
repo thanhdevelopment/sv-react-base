@@ -21,9 +21,9 @@
     }
     &--discount {
         position: absolute;
-        background: url('/Images/ic-discount.svg') center no-repeat;
+        background: url('/media/images/ic-discount.svg') center no-repeat;
         display: inline-block;
-        padding: 12px;
+        padding: 14px;
         top: 10px;
         right: 0;
         // box-shadow: 0px 3px 6px #00000029;
@@ -31,8 +31,8 @@
         // -webkit-box-shadow: 0px 3px 6px #00000029;
         > span {
             font-family: NunitoSansRegular;
-            font-size: 16px;
-            line-height: 21px;
+            font-size: 12px;
+            line-height: 16px;
             color: #ffffff;
         }
     }

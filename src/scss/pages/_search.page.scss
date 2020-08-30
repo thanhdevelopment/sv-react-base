@@ -1,0 +1,17 @@
+.coco-search-wrap {
+    padding-bottom: 88px;
+    .coco-breadcrumb-wrap {
+        padding: 14px 0;
+    }
+    &--body {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #d4d4d4;
+        .coco-search__left {
+            width: 16%;
+        }
+        .coco-search__right {
+            width: 83%;
+        }
+    }
+}

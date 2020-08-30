@@ -7,8 +7,7 @@ import './scss/style.core.scss';
 
 // Components
 import Home from '../src/views/home';
-
-// Components
+import Search from '../src/views/search';
 import { Layout } from './components/layouts';
 
 // Services
@@ -23,6 +22,10 @@ ReactDOM.render(
                         path="/"
                         component={Home}
                         exact
+                    />
+                    <Route
+                        path="/search"
+                        component={Search}
                     />
                 </Switch>
             </Layout>
