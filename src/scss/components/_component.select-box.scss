@@ -1,21 +1,19 @@
-.coco-selectbox-wrap {
-    .form-control {
-        // width: unset;
-        height: unset;
-    }
-}
-
 .ccs-selectbox {
+    position: relative;
     > select {
         width: 100%;
         border: 1px solid #bebebe;
-        padding: 15px 24px;
+        -webkit-appearance: none;
+    }
+    > img {
+        position: absolute;
+        top: 14px;
+        right: 8px;
     }
     &.ccs-select-price {
         > select {
             min-height: 32px;
-            max-width: 124px;
-            padding: 0px 12px;
+            padding: 0 48px 0 16px;
             outline: none;
             background: #ffffff;
             border-color: #ffffff;

@@ -39,7 +39,8 @@
                 .coco-footer--wrap__image {
                     margin-top: 40px;
                     > img {
-                        width: 217px;
+                        width: 100%;
+                        max-width: 217px;
                     }
                 }
                 .coco-footer--wrap__icon {
@@ -63,6 +64,12 @@
                     line-height: 19px;
                     color: #ffffff;
                     text-align: left;
+                }
+                .coco-footer--wrap__image {
+                    > img {
+                        width: 100%;
+                        max-width: 480px;
+                    }
                 }
             }
             &__right {
