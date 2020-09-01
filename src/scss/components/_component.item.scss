@@ -22,8 +22,11 @@
     &--discount {
         position: absolute;
         background: url('/media/images/ic-discount.svg') center no-repeat;
-        display: inline-block;
-        padding: 14px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 12%;
+        width: 20%;
         top: 10px;
         right: 0;
         // box-shadow: 0px 3px 6px #00000029;
@@ -34,6 +37,7 @@
             font-size: 12px;
             line-height: 16px;
             color: #ffffff;
+            padding-bottom: 2px;
         }
     }
     &--title {

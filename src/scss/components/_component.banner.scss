@@ -2,22 +2,17 @@
     display: flex;
     justify-content: space-between;
     &--left {
-        > img {
-            width: 44rem;
-            object-fit: cover;
-            max-height: 400px;
-            box-shadow: 0px 3px 6px #00000029;
-            -moz-box-shadow: 0px 3px 6px #00000029;
-            -webkit-box-shadow: 0px 3px 6px #00000029;
-        }
+        width: 100%;
+        max-width: 44rem;
     }
     &--right {
         display: flex;
         flex-direction: column;
         > img {
-            width: 24rem;
+            width: 100%;
+            max-width: 24rem;
             object-fit: cover;
-            max-height: 196px;
+            max-height: 194px;
             box-shadow: 0px 3px 6px #00000029;
             -moz-box-shadow: 0px 3px 6px #00000029;
             -webkit-box-shadow: 0px 3px 6px #00000029;

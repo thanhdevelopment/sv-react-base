@@ -18,6 +18,21 @@ function BtnNextArrow(props) {
     );
 }
 
+function BtnPrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <img
+                src="/media/images/ic-next.svg"
+                alt=""
+            />
+        </div>
+    );
+}
+
 class Carousel extends Component {
     render() {
         const {
@@ -34,6 +49,7 @@ class Carousel extends Component {
             slidesToShow: setSlidesToShow ? setSlidesToShow : 6,
             slidesToScroll: setSlidesToScroll ? setSlidesToScroll : 6,
             nextArrow: <BtnNextArrow />,
+            prevArrow: <BtnPrevArrow />
         };
         const verticalSettings = {
             dots: false,
@@ -42,6 +58,19 @@ class Carousel extends Component {
             speed: 500,
             slidesPerRow: 2,
             nextArrow: <BtnNextArrow />,
+            prevArrow: <BtnPrevArrow />
+        };
+        const slideShowSettings = {
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 500,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            nextArrow: <BtnNextArrow />,
+            prevArrow: <BtnPrevArrow />
         };
         if (typeSlider === 1) {
             return (
@@ -52,6 +81,12 @@ class Carousel extends Component {
         } else if (typeSlider === 2) {
             return (
                 <Slider {...verticalSettings} className={className}>
+                    {children}
+                </Slider>
+            );
+        } else if (typeSlider === 3) {
+            return (
+                <Slider {...slideShowSettings} className={className}>
                     {children}
                 </Slider>
             );

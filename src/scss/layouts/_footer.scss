@@ -26,7 +26,8 @@
                     display: flex;
                     justify-content: center;
                     > img {
-                        width: 82%;
+                        width: 100%;
+                        max-width: 217px;
                     }
                     > span {
                         font-family: NunitoSansSemiBold;

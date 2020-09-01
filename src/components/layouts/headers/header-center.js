@@ -6,7 +6,7 @@ function HeaderCenter() {
             <div className="header-center--wrapper">
                 <div className="header-center--wrapper__logo">
                     <a href='/'>
-                        <img src='/media/images/logo_cocoshop.png' alt="" />
+                        <img src='/media/images/logo_cocoshop.svg' alt="" />
                     </a>
                 </div>
                 <div className="header-center--wrapper__search">

@@ -36,6 +36,9 @@
                 .slick-next {
                     top: 25%;
                 }
+                .slick-prev {
+                    top: 25%;
+                }
             }
         }
     }
@@ -46,6 +49,9 @@
             &__content {
                 .slick-next {
                     right: -12px;
+                }
+                .slick-prev {
+                    left: 6px;
                 }
             }
         }
@@ -260,8 +266,8 @@
             }
 
             &.nav-padding {
-               padding-top: 12px;
-               padding-bottom: 12px;
+                padding-top: 12px;
+                padding-bottom: 12px;
             }
 
             .nav-flex-right {

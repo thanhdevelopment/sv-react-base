@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HeaderBottom() {
+function HeaderBottom(props) {
     const FAKE_DATA = [
         'TRANG ĐIỂM',
         'SON MÔI',
@@ -16,7 +16,7 @@ function HeaderBottom() {
     ];
 
     return (
-        <div className="header-bottom">
+        <div className={`header-bottom ${props.activeMenu}`}>
             {/* begin:: menu left */}
             <div className="header-bottom--left">
                 <div className="header-bottom--left__dropdown">
@@ -26,12 +26,21 @@ function HeaderBottom() {
                         <div></div>
                     </div>
                     <span>DANH MỤC SẢN PHẨM</span>
-                    <div className={'header-bottom--left__content'}>
+                    <div
+                        className="header-bottom--left__content"
+                        // set opacity for layout when hover menu
+                        onMouseEnter={() => {
+                            props.setOverFlow("layout_overlay");
+                        }}
+                        onMouseLeave={() => {
+                            props.setOverFlow("");
+                        }}
+                    >
                         {
                             FAKE_DATA.map(item => (
                                 <div className="header-bottom--left__item" key={item}>
                                     <span>{item}</span>
-                                    <img src="/media/images/ic-arrowback.svg" />
+                                    <img src="/media/images/ic-arrowback.svg" alt="" />
                                     <div className="header-bottom--left__item__child">
                                         <div>
                                             <div className="header-bottom--left__item--detail">
@@ -78,7 +87,7 @@ function HeaderBottom() {
                                                 </div>
                                             </div>
                                             <div className="header-bottom--left__item--poster">
-                                                <img src="/media/images/trangdiem.png" />
+                                                <img src="/media/images/trangdiem.png" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -152,14 +161,14 @@ function HeaderBottom() {
                     <span>Tải ứng dụng</span>
                     <div className="header-bottom--right__item header-bottom--right__app">
                         <div>
-                            <img src="/media/images/app-qrcode.png" />
+                            <img src="/media/images/app-qrcode.png" alt="" />
                             <div className="coco-mdxw-list-app_icon">
                                 <div>
-                                    <img src="/media/images/ic-appstore-black.svg" />
+                                    <img src="/media/images/ic-appstore-black.svg" alt="" />
                                     <span> App Store</span>
                                 </div>
                                 <div>
-                                    <img src="/media/images/ic-googleplay-black.svg" />
+                                    <img src="/media/images/ic-googleplay-black.svg" alt="" />
                                     <span> Google Play</span>
                                 </div>
                             </div>
