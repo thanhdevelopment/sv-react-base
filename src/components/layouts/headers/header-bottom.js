@@ -41,10 +41,10 @@ function HeaderBottom(props) {
                                 <div className="header-bottom--left__item" key={item}>
                                     <span>{item}</span>
                                     <img src="/media/images/ic-arrowback.svg" alt="" />
-                                    <div className="header-bottom--left__item__child">
+                                    <div className="header-bottom--left__submenu">
                                         <div>
-                                            <div className="header-bottom--left__item--detail">
-                                                <div className="header-bottom--left__item--header">
+                                            <div className="header-bottom--submenu__items">
+                                                <div className="item--group__buttons">
                                                     <div>
                                                         <span>Nổi bật</span>
                                                     </div>
@@ -58,36 +58,49 @@ function HeaderBottom(props) {
                                                         <span>Khuyến mại</span>
                                                     </div>
                                                 </div>
-                                                <div className="header-bottom--left__item--content">
-                                                    <div className="coco-mdddic-block1_content__col">
-                                                        <div className="coco-mdddic-block1-content_col__title">
-                                                            Trang Điểm Mặt
+                                                <div className="item--group__items">
+                                                    <div className="item-group-sub-items">
+                                                        <div className="sub-items--col">
+                                                            <div className="sub-items--col__title">
+                                                                Trang Điểm Mặt
                                                         </div>
-                                                        <div className="coco-mdddic-block1-content_col__subtitle">
-                                                            <span>Kem Nền</span>
-                                                            <span>Kem Lót</span>
-                                                            <span>Che Khuyết Điểm</span>
-                                                            <span>Phấn Má Hồng</span>
-                                                            <span>Phấn Nước Cushion</span>
-                                                            <span>Phấn Phủ</span>
-                                                            <span>Tạo Khối - Highlighter</span>
+                                                            <div className="sub-items--col__subtitle">
+                                                                <span>Kem Nền</span>
+                                                                <span>Kem Lót</span>
+                                                                <span>Che Khuyết Điểm</span>
+                                                                <span>Phấn Má Hồng</span>
+                                                                <span>Phấn Nước Cushion</span>
+                                                                <span>Phấn Phủ</span>
+                                                                <span>Tạo Khối - Highlighter</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="sub-items--col">
+                                                            <div className="sub-items--col__title">
+                                                                Trang Điểm Vùng Mắt
+                                                        </div>
+                                                            <div className="sub-items--col__subtitle">
+                                                                <span>Kẻ Chân Mày</span>
+                                                                <span>Kẻ Mắt</span>
+                                                                <span>Mascara</span>
+                                                                <span>Phấn Mắt</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="sub-items--col">
+                                                            <div className="sub-items--col__title">
+                                                                Trang Điểm Vùng Mắt
+                                                        </div>
+                                                            <div className="sub-items--col__subtitle">
+                                                                <span>Kẻ Chân Mày</span>
+                                                                <span>Kẻ Mắt</span>
+                                                                <span>Mascara</span>
+                                                                <span>Phấn Mắt</span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div className="coco-mdddic-block1_content__col">
-                                                        <div className="coco-mdddic-block1-content_col__title">
-                                                            Trang Điểm Vùng Mắt
-                                                        </div>
-                                                        <div className="coco-mdddic-block1-content_col__subtitle">
-                                                            <span>Kẻ Chân Mày</span>
-                                                            <span>Kẻ Mắt</span>
-                                                            <span>Mascara</span>
-                                                            <span>Phấn Mắt</span>
-                                                        </div>
+                                                    <div className="item-group-poster">
+                                                        <img src="/media/images/nuochoa.png" alt="" />
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="header-bottom--left__item--poster">
-                                                <img src="/media/images/trangdiem.png" alt="" />
                                             </div>
                                         </div>
                                     </div>

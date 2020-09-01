@@ -87,13 +87,13 @@
                     font-family: NunitoSansBold;
                     font-size: 14px;
                 }
-                &:hover .header-bottom--left__item__child {
+                &:hover .header-bottom--left__submenu {
                     opacity: 1;
                     display: block;
                     visibility: visible;
                 }
             }
-            .header-bottom--left__item__child {
+            .header-bottom--left__submenu {
                 opacity: 0;
                 visibility: hidden;
                 width: 100%;
@@ -115,19 +115,16 @@
                 > div {
                     width: 100%;
                     max-height: 396px;
-                    display: flex;
-                    justify-content: space-between;
                     position: relative;
-                    .header-bottom--left__item--detail {
-                        width: 60%;
+                    .header-bottom--submenu__items {
                         display: flex;
                         flex-direction: column;
                         padding: 16px;
                         overflow: hidden;
-                        .header-bottom--left__item--header {
+                        .item--group__buttons {
                             display: flex;
                             flex-direction: row;
-                            justify-content: space-between;
+                            justify-content: flex-start;
                             > div {
                                 margin-right: 16px;
                                 padding: 6.5px 15px;
@@ -151,45 +148,50 @@
                                 }
                             }
                         }
-                        .header-bottom--left__item--content {
+                        .item--group__items {
                             width: 100%;
                             display: flex;
-                            flex-wrap: wrap;
-                            justify-content: space-between;
-                            color: #000000;
-                            .coco-mdddic-block1_content__col {
-                                width: 45%;
-                                margin-top: 16px;
-                                .coco-mdddic-block1-content_col__title {
-                                    font-family: NunitoSansBold;
-                                    font-size: 14px;
-                                    line-height: 19px;
-                                }
-                                .coco-mdddic-block1-content_col__subtitle {
-                                    // margin-top: 10px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    padding: 0 20px;
-                                    > span {
-                                        margin-top: 7px;
-                                        font-family: NunitoSansRegular;
+                            .item-group-sub-items {
+                                width: 55%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                color: #000000;
+                                .sub-items--col {
+                                    margin-top: 16px;
+                                    &__title {
+                                        font-family: NunitoSansBold;
                                         font-size: 14px;
-                                        line-height: 21px;
-                                        white-space: nowrap;
-                                        &:hover {
-                                            font-family: NunitoSansBold;
+                                        line-height: 19px;
+                                    }
+                                    &__subtitle {
+                                        // margin-top: 10px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        padding: 0 20px;
+                                        > span {
+                                            margin-top: 5px;
+                                            font-family: NunitoSansRegular;
+                                            font-size: 14px;
+                                            line-height: 21px;
+                                            white-space: nowrap;
+                                            &:hover {
+                                                font-family: NunitoSansBold;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .header-bottom--left__item--poster {
-                        width: 35%;
-                        > img {
-                            max-width: 277px;
+                        .item-group-poster {
                             max-height: 410px;
-                            object-fit: cover;
+                            > img {
+                                position: absolute;
+                                // width: 100%;
+                                top: 25%;
+                                right: -70px;
+                                max-width: 100%;
+                                object-fit: cover;
+                            }
                         }
                     }
                 }
