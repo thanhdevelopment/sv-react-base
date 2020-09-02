@@ -248,9 +248,9 @@
     align-items: center;
     &--img {
         width: 100%;
-        max-width: 14rem;
-        height: 14rem;
-        padding: 5px;
+        max-width: 13rem;
+        height: 13rem;
+        padding: 6px 7px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -260,8 +260,8 @@
         > img {
             display: inline-block;
             width: 100%;
-            max-width: 12.9rem;
-            height: 12.9rem;
+            max-width: 12.4rem;
+            height: 12.4rem;
             border-radius: 50%;
             border: 3px solid #000000;
         }
