@@ -20,7 +20,6 @@ const Search = () => {
     return (
         <div className="coco-search-wrap">
             <BreadCrumb
-                marginTop="13px"
                 firstUrl="Trang điểm"
                 firstRouter="#"
                 secondUrl="Trang điểm mặt"

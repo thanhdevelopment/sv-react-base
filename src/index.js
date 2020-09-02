@@ -8,6 +8,7 @@ import './scss/style.core.scss';
 // Components
 import Home from '../src/views/home';
 import Search from '../src/views/search';
+import ProductDetail from '../src/views/product-detail';
 import { Layout } from './components/layouts';
 
 // Services
@@ -26,6 +27,10 @@ ReactDOM.render(
                     <Route
                         path="/search"
                         component={Search}
+                    />
+                    <Route
+                        path="/product-detail"
+                        component={ProductDetail}
                     />
                 </Switch>
             </Layout>
