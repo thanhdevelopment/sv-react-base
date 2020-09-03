@@ -1,5 +1,4 @@
-import React from "react";
-// import "../../../sass/global/components/_component.header.scss";
+import React, { Children } from "react";
 
 const CardHeader = (props) => {
     const {
@@ -11,7 +10,9 @@ const CardHeader = (props) => {
         borderBottom,
         posterImg,
         posterTitle,
-        btnExternal
+        btnExternal,
+        className,
+        children
     } = props;
     if (type === "header") {
         return (
@@ -67,6 +68,29 @@ const CardHeader = (props) => {
                     <img src={posterImg} alt="" />
                 </div>
             </div>
+        );
+    } else if (type === "custom") {
+        return (
+            <div className={`ccs-card-header ${className}`}>
+                <div className="ccs-card-header--left">
+                    <div
+                        className="ccs-card-header--left__logo"
+                        style={{ display: logoHeader ? "" : "none" }}
+                    >
+                        <img src={logoHeader} alt="" />
+                    </div>
+                    <div className="ccs-card-header--left__title">{titleHeader}</div>
+                </div>
+                <div className="ccs-card-header--body">
+                    {children}
+                </div>
+                <div className="ccs-card-header--right"
+                    style={{ display: btnExternal ? "" : "none" }}
+                >
+                    <span>{btnExternal}</span>
+                    <img src="/media/images/ic-arrowback.svg" alt="" />
+                </div>
+            </div >
         );
     } else {
         return (

@@ -141,6 +141,8 @@
         }
 
         &--right {
+            display: flex;
+            align-items: center;
             > span {
                 cursor: pointer;
                 font-family: NunitoSansRegular;
@@ -148,6 +150,10 @@
                 line-height: 19px;
                 color: #c73030;
                 text-transform: uppercase;
+            }
+            > img {
+                width: 6px;
+                padding-left: 8px;
             }
         }
     }

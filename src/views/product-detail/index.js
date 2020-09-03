@@ -1,15 +1,18 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React, { useState, useEffect } from "react";
 import BreadCrumb from "../../components/breadcum";
 import Button from "../../components/buttons/button";
 import SelectBox from "../../components/select-box";
-import CardDetail from "../../components/cards/card-detail";
+import ItemCart from "../../components/items/item-cart";
+import ItemProduct from "../../components/items/item-product";
+import CardHeader from "../../components/cards/card-header";
 import CardHorizontal from "../../components/cards/card-horizontal";
 
 const ProductDetail = () => {
     const arr2 = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
+    let [urlImage, setUrlImage] = useState("");
+    useEffect(() => {
 
+    }, []);
     return (
         <div className="product-detail-wrap">
             <BreadCrumb
@@ -25,30 +28,37 @@ const ProductDetail = () => {
                             <div className="product-images-group">
                                 <div className="product-images">
                                     <a>
-                                        <img src="/media/images/thumnail-product2.png" alt="" />
+                                        <img
+                                            id="thumb-image"
+                                            src="/media/images/Image 77.png"
+                                            alt=""
+                                            onClick={() => {
+                                                setUrlImage(document.getElementById("thumb-image").src);
+                                            }}
+                                        />
                                     </a>
                                     <a>
-                                        <img src="/media/images/thumnail-product2.png" alt="" />
+                                        <img class="thumb-image" src="/media/images/thumnail-product2.png" alt="" />
                                     </a>
                                     <a>
-                                        <img src="/media/images/thumnail-product2.png" alt="" />
+                                        <img class="thumb-image" src="/media/images/thumnail-product2.png" alt="" />
                                     </a>
                                     <a>
-                                        <img src="/media/images/thumnail-product2.png" alt="" />
+                                        <img class="thumb-image" src="/media/images/thumnail-product2.png" alt="" />
                                     </a>
                                 </div>
                                 <div className="product-thumbnail">
-                                    <img src="/media/images/thumnail-product1.png" alt="" />
+                                    <img src={urlImage ? urlImage : "/media/images/thumnail-product1.png"} alt="" />
                                 </div>
                             </div>
                             <div className="list-button-group">
                                 <div className="share-buttons">
                                     <span>Chia sẻ:</span>
-                                    <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    <img src="/media/images/ic-fb-color.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
                                 </div>
                                 <div className="like-button">
                                     <img src="/media/images/ic-heart.svg" alt="" />
@@ -61,21 +71,11 @@ const ProductDetail = () => {
                             <div className="product-name">Son Kem Lì M.O.I S-Girls 07 Successful Matte Liquid Lipstick by Hương Giang</div>
                             <div className="product-sub-info">
                                 <div className="product-sub-info--item">
-                                    <a>
-                                        <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    </a>
-                                    <a>
-                                        <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    </a>
-                                    <a>
-                                        <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    </a>
-                                    <a>
-                                        <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    </a>
-                                    <a>
-                                        <img src="/media/images/ic-fb-color.svg" alt="" />
-                                    </a>
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/star.svg" alt="" />
                                     <span>150 đánh giá</span>
                                 </div>
                                 <div className="product-sub-info--item">5 Hỏi đáp</div>
@@ -121,21 +121,29 @@ const ProductDetail = () => {
                             </div>
                             <div className="product-delivery">
                                 <img src="/media/images/ic-transpoter.svg" alt="" />
-                                <span>HN: Bạn muốn nhận hàng trước 20h hôm nay. Đặt hàng trong 49 phút tới và chọn giao hàng 2H ở bước thanh toán. Xem chi tiết</span>
+                                <span>
+                                    HN: Bạn muốn nhận hàng trước
+                                    <span> 20h </span>
+                                     hôm nay. Đặt hàng trong
+                                     <span> 49 phút </span>
+                                     tới và chọn giao hàng
+                                     <span> 2H </span>
+                                     ở bước thanh toán. Xem chi tiết
+                                </span>
                             </div>
                             <div className="product-buttons-group">
                                 <Button
-                                    icon="/media/images/ic-cart-red.svg"
+                                    icon="/media/images/ic-location.svg"
                                     text="9/9 chi nhánh còn sản phẩm"
                                     className="ccs-btn btn-location"
                                 />
                                 <Button
-                                    icon="/media/images/ic-cart-red.svg"
+                                    icon="/media/images/Group 5178.svg"
                                     text="Giỏ hàng"
                                     className="ccs-btn btn-cart"
                                 />
                                 <Button
-                                    icon="/media/images/ic-cart.svg"
+                                    icon="/media/images/ic-white-cart.svg"
                                     text="Mua ngay"
                                     subText="Nội thành Hà Nội giao hàng trong 2H"
                                     className="ccs-btn btn-order"
@@ -143,11 +151,14 @@ const ProductDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="tab-info-product-detail">
+                    <div className="tab-info-product-detail" id="tab-info-product-detail">
                         <div className="main-nav-tab">
                             <ul className="group-tabs">
                                 <li className="tab-item">
-                                    <a href="javascript:void(0);" id="tab-product-info">Thông tin sản phẩm</a>
+                                    <a
+                                        href="javascript:void(0);"
+                                        id="tab-product-info"
+                                    >Thông tin sản phẩm</a>
                                 </li>
                                 <li className="tab-item">
                                     <a href="javascript:void(0);" id="tab-product-guide">Hướng dẫn sử dụng</a>
@@ -297,9 +308,81 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
                                 <div className="content-feedback">
-                                    <div>
+                                    <div className="title-box-feedback">
                                         <span>150 bình luận cho sản phẩm này</span>
-                                        <SelectBox className="ccs-selectbox" option="Ngày đánh giá" />
+                                        <SelectBox className="ccs-selectbox selectbox-md" option="Ngày đánh giá" />
+                                    </div>
+                                    <div className="list-group-feedback">
+                                        <div className="item-feedback">
+                                            <div className="feedback-info">
+                                                <div className="feedback-info--user">
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <span>Hoàng Linh</span>
+                                                </div>
+                                                <div className="feedback-info--timer">
+                                                    09: 32 | 23/03/2020
+                                                </div>
+                                            </div>
+                                            <div className="feedback-content">
+                                                <div className="feedback-content--title">
+                                                    <span>Son Kem Lì M.O.I S-Girls 06 Stylish</span>
+                                                    <div>
+                                                        <img src="/media/images/ic-shield.svg" alt="" />
+                                                        Đã mua hàng online
+                                                    </div>
+                                                </div>
+                                                <div className="feedback-content--comment">
+                                                    đã mua màu 06 hợp với makeup cá tính. chất son ok. Sẽ ủng hộ shop dài dài...
+                                                </div>
+                                            </div>
+                                            <div className="feedback-image">
+                                                <div>
+                                                    <img src="/media/images/Image 80.png" alt="" />
+                                                </div>
+                                                <div>
+                                                    <img src="/media/images/Image 81.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="item-feedback">
+                                            <div className="feedback-info">
+                                                <div className="feedback-info--user">
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <img src="/media/images/star.svg" alt="" />
+                                                    <span>Hoàng Linh</span>
+                                                </div>
+                                                <div className="feedback-info--timer">
+                                                    09: 32 | 23/03/2020
+                                                </div>
+                                            </div>
+                                            <div className="feedback-content">
+                                                <div className="feedback-content--title">
+                                                    <span>Son Kem Lì M.O.I S-Girls 06 Stylish</span>
+                                                    <div>
+                                                        <img src="/media/images/ic-shield.svg" alt="" />
+                                                        Đã mua hàng online
+                                                    </div>
+                                                </div>
+                                                <div className="feedback-content--comment">
+                                                    đã mua màu 06 hợp với makeup cá tính. chất son ok. Sẽ ủng hộ shop dài dài...
+                                                </div>
+                                            </div>
+                                            <div className="feedback-image">
+                                                <div>
+                                                    <img src="/media/images/Image 80.png" alt="" />
+                                                </div>
+                                                <div>
+                                                    <img src="/media/images/Image 81.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -307,10 +390,85 @@ const ProductDetail = () => {
                     </div>
                 </div>
                 <div className="product-detail-body--right">
-                    dfdfdfdfdf
-                    <div className="tab-delivery"></div>
-                    <div className="tab-product-related"></div>
-                    <div className="tab-product-trending"></div>
+                    <div className="tab-delivery">
+                        <CardHeader
+                            type="custom"
+                            className="common-card delivery-card"
+                            titleHeader="MIỄN PHÍ VẬN CHUYỂN"
+                            btnExternal="Xem thêm"
+                        >
+                            <div className="item-delivery">
+                                <img src="/media/images/real-product.svg" alt="" />
+                                <span>Phát hiện hàng giả, bạn trả hàng và nhận thêm
+                                    <span> 110% </span>giá trị.
+                                </span>
+                            </div>
+                            <div className="item-delivery">
+                                <img src="/media/images/ship-cod.svg" alt="" />
+                                <span>Thanh toán kiểm tra sản phẩm khi nhận hàng</span>
+                            </div>
+                            <div className="item-delivery">
+                                <img src="/media/images/free-return.svg" alt="" />
+                                <span>14 ngày đổi trả sản phẩm miễn phí</span>
+                            </div>
+                            <div className="item-delivery">
+                                <img src="/media/images/now-free.svg" alt="" />
+                                <span>
+                                    Giao hàng
+                                    <span> 2H miễn phí </span>
+                                    nội thành Hà Nội.
+                                </span>
+                            </div>
+                        </CardHeader>
+                    </div>
+                    <div className="tab-product-related">
+                        <CardHeader
+                            type="custom"
+                            className="common-card product-related-card"
+                            titleHeader="Sản phẩm cùng thương hiệu"
+                            btnExternal="Xem thêm"
+                        >
+                            <div className="list-products-wrapper">
+                                <ItemCart>
+                                    <span>211.500 đ</span>
+                                    <span>235.000 đ</span>
+                                </ItemCart>
+                                <ItemCart>
+                                    <span>211.500 đ</span>
+                                    <span>235.000 đ</span>
+                                </ItemCart>
+                                <ItemCart>
+                                    <span>211.500 đ</span>
+                                    <span>235.000 đ</span>
+                                </ItemCart>
+                            </div>
+                        </CardHeader>
+                    </div>
+                    <div className="tab-product-trending">
+                        <CardHeader
+                            type="custom"
+                            className="common-card product-trending-card"
+                            titleHeader="Top Sản Phẩm Bán Chạy"
+                        >
+                            <div className="list-products-wrapper">
+                                <ItemProduct
+                                    hiddenLabel='none'
+                                    hiddenDiscount='none'
+                                    hiddenCountdown='none'
+                                />
+                                <ItemProduct
+                                    hiddenLabel='none'
+                                    hiddenDiscount='none'
+                                    hiddenCountdown='none'
+                                />
+                                <ItemProduct
+                                    hiddenLabel='none'
+                                    hiddenDiscount='none'
+                                    hiddenCountdown='none'
+                                />
+                            </div>
+                        </CardHeader>
+                    </div>
                 </div>
             </div>
             <CardHorizontal
