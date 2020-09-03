@@ -84,8 +84,7 @@ const ProductDetail = () => {
                             <div className="product-price">299,000 ₫</div>
                             <div className="product-gift">
                                 <div className="product-gift--title">
-                                    {/* icon gift */}
-                                    <img src="" alt="" />
+                                    <img src="/media/images/ic-gift.svg" alt="" />
                                     <span>Quà tặng: Bông tẩy trang silicot 82 miếng (sl có hạn)</span>
                                 </div>
                                 <div className="product-gift--detail">
@@ -155,24 +154,21 @@ const ProductDetail = () => {
                         <div className="main-nav-tab">
                             <ul className="group-tabs">
                                 <li className="tab-item">
-                                    <a
-                                        href="javascript:void(0);"
-                                        id="tab-product-info"
-                                    >Thông tin sản phẩm</a>
+                                    <a href="tab-product-info" >Thông tin sản phẩm</a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="javascript:void(0);" id="tab-product-guide">Hướng dẫn sử dụng</a>
+                                    <a href="#tab-product-guide">Hướng dẫn sử dụng</a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="javascript:void(0);">Đánh giá</a>
+                                    <a href="#tab-product-feedback">Đánh giá</a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="javascript:void(0);">Hỏi đáp</a>
+                                    <a href="#tab-product-question">Hỏi đáp</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="tab-content">
-                            <div className="tab-content--description">
+                            <div id="tab-product-info" className="tab-content--description">
                                 <div className="title-desciption">Son Kem Lì M.O.I S-Girls Matte Liquid Lipstick by Hương Giang</div>
                                 <div className="content-desciption">
                                     Sau những thành công nhất định với 3 dòng sản phẩm trước của thương hiệu M.O.I Cosmetics,
@@ -228,7 +224,7 @@ const ProductDetail = () => {
                                     className="ccs-btn btn-attribute"
                                 />
                             </div>
-                            <div className="tab-content--guide">
+                            <div id="tab-product-guide" className="tab-content--guide">
                                 <div className="title-guide">Hướng dẫn sử dụng</div>
                                 <div className="content-guide">
                                     Sau những thành công nhất định với 3 dòng sản phẩm trước của thương hiệu M.O.I Cosmetics,
@@ -239,7 +235,7 @@ const ProductDetail = () => {
                                     dẫn đầu các xu hướng.
                                 </div>
                             </div>
-                            <div className="tab-content--feedback">
+                            <div id="tab-product-feedback" className="tab-content--feedback">
                                 <div className="title-feedback">Đánh giá</div>
                                 <div className="subtitle-feedback">Khách hàng nhận xét</div>
                                 <div className="rating-feedback">

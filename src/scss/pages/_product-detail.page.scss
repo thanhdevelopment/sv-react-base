@@ -156,10 +156,12 @@
                         max-width: 400px;
                         display: flex;
                         flex-direction: column;
-                        padding: 8px 12px;
+                        padding: 8px 19px;
                         border: 1px dashed #707070;
                         border-radius: 5px;
                         &--title {
+                            display: flex;
+                            align-items: center;
                             > img {
                                 width: 19px;
                             }
@@ -168,10 +170,11 @@
                                 font-size: 14px;
                                 line-height: 19px;
                                 color: #c73030;
+                                padding-left: 5px;
                             }
                         }
                         &--detail {
-                            margin-top: 4px;
+                            margin-top: 5px;
                             display: flex;
                             align-items: center;
                             > img {
@@ -186,10 +189,10 @@
                                 display: flex;
                                 flex-direction: column;
                                 > span {
-                                    padding-left: 10px;
+                                    padding-left: 8px;
                                     font-family: NunitoSansRegular;
-                                    font-size: 13px;
-                                    line-height: 17px;
+                                    font-size: 12px;
+                                    line-height: 16px;
                                     color: #000000;
                                     > span {
                                         font-family: NunitoSansBold;
