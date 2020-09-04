@@ -295,24 +295,30 @@
                         list-style: none;
                         margin: 0;
                         padding: 0;
+                        border-radius: 5px 0px 0px 0px;
                         .tab-item {
-                            padding: 10px 16px;
-                            transition: all ease 0.3s;
+                            padding: 10px 0;
+                            transition: all ease 0.2s;
                             border-right: 1px solid #c8d1dc;
-                            border-radius: 5px 0px 0px 0px;
                             > a {
+                                padding: 10px 16px;
                                 text-decoration: none;
-                                font-family: NunitoSansRegular;
                                 font-size: 14px;
                                 line-height: 19px;
                                 color: #000000;
                             }
                         }
-                        .active {
+                        .tab-active {
                             background: #ffffff;
                             border-bottom: 2px solid #c73030;
                             > a {
                                 font-family: NunitoSansBold;
+                            }
+                        }
+                        .tab-inactive {
+                            background: #e5e4e4;
+                            > a {
+                                font-family: NunitoSansRegular;
                             }
                         }
                     }
@@ -320,12 +326,21 @@
                 .tab-content {
                     padding: 16px;
                     overflow: hidden;
-                    &--description {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        .title-desciption {
-                            margin-top: 1rem;
+                    transition: all ease 0.2s;
+                    .content-active {
+                        display: block;
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 0;
+                    }
+                    .content-inactive {
+                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                    }
+                    .tab {
+                        .title-content {
                             font-family: NunitoSansBold;
                             font-size: 18px;
                             line-height: 25px;
@@ -338,7 +353,6 @@
                                 bottom: 0;
                                 height: 2px;
                                 z-index: 2;
-                                width: 50%;
                                 border-bottom: 1px solid #c73030;
                             }
                             &:after {
@@ -349,6 +363,17 @@
                                 height: 2px;
                                 width: 100%;
                                 border-bottom: 1px solid #e4e4e4;
+                            }
+                        }
+                    }
+                    &--description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .title-content {
+                            margin-top: 1rem;
+                            &::before {
+                                width: 50%;
                             }
                         }
                         .content-desciption {
@@ -394,31 +419,10 @@
                         }
                     }
                     &--guide {
-                        .title-guide {
-                            margin-top: 24px;
-                            font-family: NunitoSansBold;
-                            font-size: 18px;
-                            line-height: 25px;
-                            padding-bottom: 7px;
-                            position: relative;
-                            &:before {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                height: 2px;
-                                z-index: 2;
+                        .title-content {
+                            margin-top: 40px;
+                            &::before {
                                 width: 18%;
-                                border-bottom: 1px solid #c73030;
-                            }
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                height: 2px;
-                                width: 100%;
-                                border-bottom: 1px solid #e4e4e4;
                             }
                         }
                         .content-guide {
@@ -430,31 +434,10 @@
                         }
                     }
                     &--feedback {
-                        .title-feedback {
-                            margin-top: 24px;
-                            font-family: NunitoSansBold;
-                            font-size: 18px;
-                            line-height: 25px;
-                            padding-bottom: 7px;
-                            position: relative;
-                            &:before {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                height: 2px;
-                                z-index: 2;
+                        .title-content {
+                            margin-top: 40px;
+                            &::before {
                                 width: 10%;
-                                border-bottom: 1px solid #c73030;
-                            }
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                height: 2px;
-                                width: 100%;
-                                border-bottom: 1px solid #e4e4e4;
                             }
                         }
                         .subtitle-feedback {
@@ -513,6 +496,11 @@
                                         color: #000000;
                                         &:nth-child(1) {
                                             margin-top: 0;
+                                            .countbar {
+                                                &::before {
+                                                    width: 40%;
+                                                }
+                                            }
                                         }
                                         .countbar {
                                             content: '';
@@ -528,7 +516,7 @@
                                                 left: 0;
                                                 bottom: 0;
                                                 z-index: 2;
-                                                width: 18%;
+                                                width: 0%;
                                                 border-radius: 2px;
                                                 border-bottom: 12px solid
                                                     #c73030;
@@ -670,6 +658,101 @@
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                    &--question {
+                        .title-content {
+                            &::before {
+                                width: 10%;
+                            }
+                        }
+                        .send-question-box {
+                            margin-top: 1rem;
+                            display: flex;
+                            align-items: center;
+                            > input {
+                                width: 100%;
+                                padding: 11px 16px;
+                                background: #ffffff;
+                                border: 1px solid #d4d4d4;
+                                border-radius: 5px;
+                                box-shadow: 0px 3px 6px #00000029;
+                                -moz-box-shadow: 0px 3px 6px #00000029;
+                                -webkit-box-shadow: 0px 3px 6px #00000029;
+                            }
+                            .ccs-btn {
+                                padding-left: 8px;
+                                > button {
+                                    padding: 0 28px;
+                                    min-height: 40px;
+                                }
+                            }
+                        }
+                        .item-question {
+                            .item-parent {
+                                margin-top: 1rem;
+                                font-size: 18px;
+                                line-height: 25px;
+                                .title-question {
+                                    font-family: NunitoSansBold;
+                                    color: #000000;
+                                }
+                                .content-question {
+                                    margin-top: 5px;
+                                    font-family: NunitoSansRegular;
+                                    color: #000000;
+                                }
+                                .list-actions {
+                                    margin-top: 10px;
+                                    > img {
+                                    }
+                                    > a {
+                                        font-family: NunitoSansRegular;
+                                        color: #000000;
+                                        cursor: pointer;
+                                    }
+                                    .like-action {
+                                        padding-left: 8px;
+                                        color: #707070;
+                                        > span {
+                                            padding-left: 5px;
+                                        }
+                                    }
+                                    .reply-action {
+                                        padding-left: 18px;
+                                        color: #c73030;
+                                    }
+                                }
+                                .reply-question-box {
+                                    display: none !important;
+                                    margin-top: 1rem;
+                                    > div {
+                                        display: flex;
+                                        align-items: flex-start;
+                                        .reply-textarea {
+                                            width: 100%;
+                                            padding: 5px 16px;
+                                            min-height: 60px;
+                                            background: #ffffff;
+                                            border: 1px solid #d4d4d4;
+                                            border-radius: 5px;
+                                        }
+                                        .ccs-btn {
+                                            padding-left: 8px;
+                                            > button {
+                                                padding: 0 28px;
+                                                min-height: 40px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .active-box {
+                                    display: block !important;
+                                }
+                            }
+                            .item-child {
+                                padding-left: 32px;
                             }
                         }
                     }

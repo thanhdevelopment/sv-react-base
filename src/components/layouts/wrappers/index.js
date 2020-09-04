@@ -15,6 +15,9 @@ const Wrapper = (props) => {
     // Variables
     const { children } = props;
     const location = useLocation();
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     useEffect(() => {
         setActiveMenu(location.pathname === "/" ? "coco-active-dropdown" : "");
@@ -51,7 +54,9 @@ const Wrapper = (props) => {
                     <img src="/media/images/ic-insta-color.svg" alt="" />
                     <img src="/media/images/ic-social-color.svg" alt="" />
                 </div>
-                <div className="coco-floating-icons__wrapper--scrolltop" >
+                <div
+                    className="coco-floating-icons__wrapper--scrolltop"
+                    onClick={scrollTop}>
                     <img src="/media/images/ic-btn-to-top.svg" alt="" />
                 </div>
             </div>

@@ -10,6 +10,8 @@ import CardHorizontal from "../../components/cards/card-horizontal";
 const ProductDetail = () => {
     const arr2 = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
     let [urlImage, setUrlImage] = useState("");
+    let [tabActive, setTabActive] = useState(1);
+    let [replyBox, setReplyBox] = useState("");
     useEffect(() => {
 
     }, []);
@@ -54,11 +56,11 @@ const ProductDetail = () => {
                             <div className="list-button-group">
                                 <div className="share-buttons">
                                     <span>Chia sẻ:</span>
-                                    <img src="/media/images/star.svg" alt="" />
-                                    <img src="/media/images/star.svg" alt="" />
-                                    <img src="/media/images/star.svg" alt="" />
-                                    <img src="/media/images/star.svg" alt="" />
-                                    <img src="/media/images/star.svg" alt="" />
+                                    <img src="/media/images/ic-messenger.svg" alt="" />
+                                    <img src="/media/images/ic-share-facebook.svg" alt="" />
+                                    <img src="/media/images/ic-share-google-plus.svg" alt="" />
+                                    <img src="/media/images/ic-pinterest.svg" alt="" />
+                                    <img src="/media/images/ic-twitter.svg" alt="" />
                                 </div>
                                 <div className="like-button">
                                     <img src="/media/images/ic-heart.svg" alt="" />
@@ -154,22 +156,109 @@ const ProductDetail = () => {
                         <div className="main-nav-tab">
                             <ul className="group-tabs">
                                 <li className="tab-item">
-                                    <a href="tab-product-info" >Thông tin sản phẩm</a>
+                                    <a
+                                        className={tabActive === 1 ? "tab-active" : "tab-inacitve"}
+                                        onClick={() => {
+                                            setTabActive(1)
+                                        }}
+                                        href="#tab-product-info"
+                                    >
+                                        Thông tin sản phẩm
+                                    </a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="#tab-product-guide">Hướng dẫn sử dụng</a>
+                                    <a
+                                        className={tabActive === 2 ? "tab-active" : "tab-inacitve"}
+                                        onClick={() => {
+                                            setTabActive(2)
+                                        }}
+                                        href="#tab-product-guide"
+                                    >
+                                        Hướng dẫn sử dụng
+                                    </a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="#tab-product-feedback">Đánh giá</a>
+                                    <a
+                                        className={tabActive === 3 ? "tab-active" : "tab-inacitve"}
+                                        onClick={() => {
+                                            setTabActive(3)
+                                        }}
+                                        href="#tab-product-feedback"
+                                    >
+                                        Đánh giá
+                                    </a>
                                 </li>
                                 <li className="tab-item">
-                                    <a href="#tab-product-question">Hỏi đáp</a>
+                                    <a
+                                        className={tabActive === 4 ? "tab-active" : "tab-inacitve"}
+                                        onClick={() => {
+                                            setTabActive(4)
+                                        }}
+                                        href="#tab-product-question"
+                                    >
+                                        Hỏi đáp
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div className="tab-content">
-                            <div id="tab-product-info" className="tab-content--description">
-                                <div className="title-desciption">Son Kem Lì M.O.I S-Girls Matte Liquid Lipstick by Hương Giang</div>
+                            <div id="tab-product-question" className={`tab tab-content--question ${tabActive !== 4 ? "content-inactive" : "content-acitve"}`} >
+                                <div className="title-content">Hỏi đáp</div>
+                                <div className="send-question-box">
+                                    <input type="text" name="question" placeholder="Bạn có câu hỏi với sản phẩm này? Đặt câu hỏi ngay..." />
+                                    <Button text="Gửi" className="ccs-btn ccs-btn-buy" />
+                                </div>
+                                <div className="item-question">
+                                    <div className="item-parent">
+                                        <div className="title-question">Long Supa - 14/05/2020</div>
+                                        <div className="content-question">Dạ hiện tại e muốn Ship trong tối nay thì không biết có được ko shop</div>
+                                        <div className="list-actions">
+                                            <img src="/media/images/ic-btn-like.svg" alt="" />
+                                            <a className="like-action">
+                                                Thích
+                                                <span>0</span>
+                                            </a>
+                                            <a className="reply-action">Trả lời</a>
+                                        </div>
+                                    </div>
+                                    <div className="item-parent item-child">
+                                        <div className="title-question">COCO SHOP - 14/05/2020</div>
+                                        <div className="content-question">Chào bạn, bạn tham khảo dịch vụ giao hàng dưới 120 phút của Hasaki tại link này nha</div>
+                                        <div className="list-actions">
+                                            <img src="/media/images/ic-btn-like.svg" alt="" />
+                                            <a className="like-action">
+                                                Thích
+                                            <span>0</span>
+                                            </a>
+                                            <a
+                                                className="reply-action"
+                                                onClick={() => { setReplyBox("active-box") }}
+                                            >Trả lời</a>
+                                        </div>
+                                        {/* Reply box will appear when user click Tra Loi */}
+                                        <div className={`reply-question-box ${replyBox}`}>
+                                            <div>
+                                                <textarea className="reply-textarea" name="reply" placeholder="Nội dung trả lời của bạn..."></textarea>
+                                                <Button text="Gửi" className="ccs-btn ccs-btn-buy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item-parent">
+                                        <div className="title-question">Long Supa - 14/05/2020</div>
+                                        <div className="content-question">Dạ hiện tại e muốn Ship trong tối nay thì không biết có được ko shop</div>
+                                        <div className="list-actions">
+                                            <img src="/media/images/ic-btn-like.svg" alt="" />
+                                            <a className="like-action">
+                                                Thích
+                                                <span>0</span>
+                                            </a>
+                                            <a className="reply-action">Trả lời</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-product-info" className={`tab tab-content--description ${tabActive === 4 ? "content-inactive" : "content-acitve"}`}>
+                                <div className="title-content">Son Kem Lì M.O.I S-Girls Matte Liquid Lipstick by Hương Giang</div>
                                 <div className="content-desciption">
                                     Sau những thành công nhất định với 3 dòng sản phẩm trước của thương hiệu M.O.I Cosmetics,
                                     đến đầu tháng 10/2019, “nữ hoàng giải trí” Hồ Ngọc Hà đã bắt tay cùng với ca sĩ – hoa hậu
@@ -217,15 +306,15 @@ const ProductDetail = () => {
                                     tiếp, nơi có nhiệt độ cao hoặc ẩm ướt. Đậy nắp kín sau khi sử dụng. Thương hiệu: M.O.I
                                 </div>
                             </div>
-                            <div className="tab-content--attribute">
+                            <div className={`tab-content--attribute  ${tabActive === 4 ? "content-inactive" : "content-acitve"}`}>
                                 <span>Để hiểu một cách rõ ràng hơn về thành phần và các công dụng từng sản phẩm hãy sử dụng tra cứu thành phần.</span>
                                 <Button
                                     text="Tra cứu thành phần"
                                     className="ccs-btn btn-attribute"
                                 />
                             </div>
-                            <div id="tab-product-guide" className="tab-content--guide">
-                                <div className="title-guide">Hướng dẫn sử dụng</div>
+                            <div id="tab-product-guide" className={`tab tab-content--guide ${tabActive === 4 ? "content-inactive" : "content-acitve"}`}>
+                                <div className="title-content">Hướng dẫn sử dụng</div>
                                 <div className="content-guide">
                                     Sau những thành công nhất định với 3 dòng sản phẩm trước của thương hiệu M.O.I Cosmetics,
                                     đến đầu tháng 10/2019, “nữ hoàng giải trí” Hồ Ngọc Hà đã bắt tay cùng với ca sĩ – hoa hậu
@@ -235,8 +324,8 @@ const ProductDetail = () => {
                                     dẫn đầu các xu hướng.
                                 </div>
                             </div>
-                            <div id="tab-product-feedback" className="tab-content--feedback">
-                                <div className="title-feedback">Đánh giá</div>
+                            <div id="tab-product-feedback" className="tab tab-content--feedback">
+                                <div className="title-content">Đánh giá</div>
                                 <div className="subtitle-feedback">Khách hàng nhận xét</div>
                                 <div className="rating-feedback">
                                     <div className="rating--box">
