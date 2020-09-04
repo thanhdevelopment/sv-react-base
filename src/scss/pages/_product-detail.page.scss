@@ -690,6 +690,9 @@
                             }
                         }
                         .item-question {
+                            max-height: 442px;
+                            overflow: hidden;
+                            padding-bottom: 8px;
                             .item-parent {
                                 margin-top: 1rem;
                                 font-size: 18px;
@@ -753,6 +756,16 @@
                             }
                             .item-child {
                                 padding-left: 32px;
+                            }
+                            .show-all-questions {
+                                margin-top: 8px;
+                                > a {
+                                    font-family: NunitoSansRegular;
+                                    font-size: 14px;
+                                    line-height: 19px;
+                                    text-decoration: none;
+                                    color: #000000;
+                                }
                             }
                         }
                     }

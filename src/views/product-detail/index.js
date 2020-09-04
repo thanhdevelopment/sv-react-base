@@ -243,17 +243,53 @@ const ProductDetail = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="item-parent">
-                                        <div className="title-question">Long Supa - 14/05/2020</div>
-                                        <div className="content-question">Dạ hiện tại e muốn Ship trong tối nay thì không biết có được ko shop</div>
+                                    <div className="item-parent item-child">
+                                        <div className="title-question">COCO SHOP - 14/05/2020</div>
+                                        <div className="content-question">Chào bạn, bạn tham khảo dịch vụ giao hàng dưới 120 phút của Hasaki tại link này nha</div>
                                         <div className="list-actions">
                                             <img src="/media/images/ic-btn-like.svg" alt="" />
                                             <a className="like-action">
                                                 Thích
-                                                <span>0</span>
+                                            <span>0</span>
                                             </a>
-                                            <a className="reply-action">Trả lời</a>
+                                            <a
+                                                className="reply-action"
+                                                onClick={() => { setReplyBox("active-box") }}
+                                            >Trả lời</a>
                                         </div>
+                                        {/* Reply box will appear when user click Tra Loi */}
+                                        <div className={`reply-question-box ${replyBox}`}>
+                                            <div>
+                                                <textarea className="reply-textarea" name="reply" placeholder="Nội dung trả lời của bạn..."></textarea>
+                                                <Button text="Gửi" className="ccs-btn ccs-btn-buy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="item-parent item-child">
+                                        <div className="title-question">COCO SHOP - 14/05/2020</div>
+                                        <div className="content-question">Chào bạn, bạn tham khảo dịch vụ giao hàng dưới 120 phút của Hasaki tại link này nha</div>
+                                        <div className="list-actions">
+                                            <img src="/media/images/ic-btn-like.svg" alt="" />
+                                            <a className="like-action">
+                                                Thích
+                                            <span>0</span>
+                                            </a>
+                                            <a
+                                                className="reply-action"
+                                                onClick={() => { setReplyBox("active-box") }}
+                                            >Trả lời</a>
+                                        </div>
+                                        {/* Reply box will appear when user click Tra Loi */}
+                                        <div className={`reply-question-box ${replyBox}`}>
+                                            <div>
+                                                <textarea className="reply-textarea" name="reply" placeholder="Nội dung trả lời của bạn..."></textarea>
+                                                <Button text="Gửi" className="ccs-btn ccs-btn-buy" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* Xem tất cả câu trả lời */}
+                                    <div className="show-all-questions">
+                                        <a href="javascript:void(0);">Xem tất cả câu trả lời</a>
                                     </div>
                                 </div>
                             </div>
