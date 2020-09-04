@@ -1,13 +1,8 @@
 /*------begin: Slider Horizontal------*/
 .list-product-horizontal--slider {
     border-top: 1px solid #e4e4e4;
-    .slick-prev {
-        padding: 2px;
-        left: 6px;
-    }
     .slick-list {
         .slick-track {
-            // transform: translate3d(-1665px, 0px, 0px);
             .slick-slide {
                 width: 256px !important;
                 margin-right: 8px;
@@ -17,21 +12,6 @@
 }
 
 .list-brand-slider {
-    .slick-next {
-        padding: 6px;
-        right: -8px;
-        > img {
-            width: 7px;
-            height: 9px;
-        }
-        &:before {
-            display: none !important;
-        }
-    }
-    .slick-prev {
-        padding: 2px;
-        left: 6px;
-    }
     .slick-list {
         .slick-track {
             .slick-slide {
@@ -308,6 +288,7 @@
     font-size: 0;
     line-height: 0;
     top: 50%;
+    left: 5px;
     width: 20px;
     height: 20px;
     transform: translate(0, -50%);
