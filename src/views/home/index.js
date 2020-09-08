@@ -6,6 +6,7 @@ import CardVertical from '../../components/cards/card-vertical';
 import CardBrand from '../../components/cards/card-brand';
 import CardArticle from '../../components/cards/card-article';
 import ItemStore from '../../components/items/item-store';
+import LazyLoading from '../../components/lazy-loading';
 
 function Home() {
     const arr2 = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
@@ -89,11 +90,7 @@ function Home() {
             <div className="hpl__store">
                 <div className="hpls__title">DANH SÁCH CỬA HÀNG</div>
                 <div className="hpls_lstStore">
-                    <ItemStore />
-                    <ItemStore />
-                    <ItemStore />
-                    <ItemStore />
-                    <ItemStore />
+                    <LazyLoading />
                 </div>
             </div>
         </div>

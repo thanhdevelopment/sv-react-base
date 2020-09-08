@@ -1,10 +1,11 @@
 .lazyloading-item {
     width: 224px;
     height: 100%;
+    position: relative;
     background: #fff;
     top: 0;
     right: 0;
-    z-index: 99;
+    overflow: hidden;
     &--thumnail {
         min-height: 248px;
         max-height: 248px;
