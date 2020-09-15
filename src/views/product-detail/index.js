@@ -6,6 +6,7 @@ import ItemCart from "../../components/items/item-cart";
 import ItemProduct from "../../components/items/item-product";
 import CardHeader from "../../components/cards/card-header";
 import CardHorizontal from "../../components/cards/card-horizontal";
+import Lazyloading from "../../components/lazy-loading";
 
 const ProductDetail = () => {
     const arr2 = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"];
@@ -25,7 +26,8 @@ const ProductDetail = () => {
             />
             <div className="product-detail-body">
                 <div className="product-detail-body--left">
-                    <div className="tab-product-detail">
+                    <Lazyloading />
+                    {/* <div className="tab-product-detail">
                         <div className="tab-product--left">
                             <div className="product-images-group">
                                 <div className="product-images">
@@ -151,7 +153,7 @@ const ProductDetail = () => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="tab-info-product-detail" id="tab-info-product-detail">
                         <div className="main-nav-tab">
                             <ul className="group-tabs">

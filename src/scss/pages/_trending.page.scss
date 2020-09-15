@@ -1,0 +1,97 @@
+.ccs-trending-wrapper {
+    padding: 56px 0 80px 0;
+    .list-articles {
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .article-item {
+            display: flex;
+            flex-direction: column;
+            color: #000000;
+            padding: 8px;
+            background: #ffffff;
+            border-radius: 5px;
+            &--title {
+                font-family: NunitoSansBold;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            &--datetime {
+                font-family: NunitoSansRegular;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            &--description {
+                font-family: NunitoSansRegular;
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+        .item-lg {
+            width: 48%;
+            > img {
+                width: 100%;
+                max-width: 636px;
+            }
+        }
+        .item-sm {
+            width: 23%;
+            > img {
+                width: 100%;
+                max-width: 308px;
+            }
+        }
+    }
+    .list-type-articles {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        > span {
+            font-family: NunitoSansBold;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .list-buttons {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .list-videos {
+        width: 100%;
+        margin-top: 80px;
+        text-align: center;
+        > span {
+            font-family: NunitoSansBold;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .video-item {
+            .video-thumbnail {
+            }
+            .video-title {
+            }
+            .video-description {
+            }
+        }
+    }
+}
+
+.trending-detail-wrapper {
+    &--left {
+    }
+    &--right {
+        &--content {
+            > img {
+                width: 100%;
+                max-width: 156px;
+            }
+            .trending-detail-info {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

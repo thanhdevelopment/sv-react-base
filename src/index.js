@@ -9,6 +9,8 @@ import './scss/style.core.scss';
 import Home from '../src/views/home';
 import Search from '../src/views/search';
 import ProductDetail from '../src/views/product-detail';
+import Trending from '../src/views/trending';
+import TrendingDetail from '../src/views/trending/trending-detail';
 import { Layout } from './components/layouts';
 
 // Services
@@ -31,6 +33,14 @@ ReactDOM.render(
                     <Route
                         path="/product-detail"
                         component={ProductDetail}
+                    />
+                    <Route
+                        path="/trending"
+                        component={Trending}
+                    />
+                    <Route
+                        path="/trending-detail"
+                        component={TrendingDetail}
                     />
                 </Switch>
             </Layout>
