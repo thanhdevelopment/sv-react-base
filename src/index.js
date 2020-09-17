@@ -8,6 +8,7 @@ import './scss/style.core.scss';
 // Components
 import Home from '../src/views/home';
 import Search from '../src/views/search';
+import Profile from '../src/views/profile';
 import ProductDetail from '../src/views/product-detail';
 import Trending from '../src/views/trending';
 import TrendingDetail from '../src/views/trending/trending-detail';
@@ -41,6 +42,10 @@ ReactDOM.render(
                     <Route
                         path="/trending-detail"
                         component={TrendingDetail}
+                    />
+                    <Route
+                        path="/form"
+                        component={Profile}
                     />
                 </Switch>
             </Layout>

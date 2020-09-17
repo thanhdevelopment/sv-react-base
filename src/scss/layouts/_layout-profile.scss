@@ -1,0 +1,62 @@
+.profile-layout-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    padding-bottom: 40px;
+    .profile-layout-left {
+        width: 20%;
+        background: pink;
+        .profile-info {
+            display: flex;
+            justify-content: flex-start;
+            .avatar {
+                max-width: 48px;
+                > img {
+                    width: 100%;
+                    max-height: 48px;
+                    object-fit: cover;
+                }
+            }
+            .information {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-left: 8px;
+                > span {
+                    &:nth-child(1) {
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-family: $font-family-base;
+                    }
+                    &:nth-last-child(1) {
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-family: $font-family-bold;
+                    }
+                }
+            }
+        }
+        .nav-container {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .item {
+                margin-top: 18px;
+                font-size: 14px;
+                line-height: 36px;
+                font-family: $font-family-base;
+                &:nth-child(1) {
+                    margin-top: 0;
+                }
+            }
+            .active {
+                font-weight: 900;
+            }
+        }
+    }
+    .profile-layout-right {
+        width: 60%;
+        background: gray;
+    }
+}
